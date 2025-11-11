@@ -1,0 +1,124 @@
+.loginContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  padding: 2rem;
+}
+
+.loginCard {
+  background-color: var(--white);
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(44, 62, 80, 0.1);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.input {
+  padding: 0.75rem;
+  border: 1px solid rgba(44, 62, 80, 0.3);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text-color);
+  background-color: var(--white);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--text-color);
+  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+  transform: translateY(-1px);
+}
+
+.submitBtn {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 0.5rem;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.2);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  padding: 1rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 4px;
+  border: 1px solid #f5c6cb;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.info {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(44, 62, 80, 0.1);
+  text-align: center;
+}
+
+.info p {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .loginCard {
+    padding: 2rem 1.5rem;
+  }
+}
+

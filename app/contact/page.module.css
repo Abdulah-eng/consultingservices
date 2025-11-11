@@ -1,0 +1,60 @@
+.contact {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  max-width: 800px;
+  margin-bottom: 3rem;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.bookingSection,
+.formSection {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 8px;
+}
+
+.sectionSubtitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.sectionDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 968px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bookingSection,
+  .formSection {
+    padding: 2rem 1.5rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.5rem;
+  }
+}
+
