@@ -7,6 +7,7 @@ interface AnimateOnScrollProps {
   animation?: 'fadeInUp' | 'fadeInLeft' | 'fadeInRight' | 'scaleIn'
   delay?: number
   className?: string
+  id?: string
 }
 
 export default function AnimateOnScroll({
@@ -14,6 +15,7 @@ export default function AnimateOnScroll({
   animation = 'fadeInUp',
   delay = 0,
   className = '',
+  id,
 }: AnimateOnScrollProps) {
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -54,6 +56,7 @@ export default function AnimateOnScroll({
   return (
     <div
       ref={ref}
+      id={id}
       className={`${animationClass} ${isVisible ? 'visible' : ''} ${className}`}
     >
       {children}
