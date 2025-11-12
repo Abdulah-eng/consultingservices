@@ -26,6 +26,14 @@
   font-weight: 700;
   color: var(--text-color);
   line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  opacity: 0.75;
   margin-bottom: 2rem;
 }
 

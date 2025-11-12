@@ -6,69 +6,41 @@ export default function Services() {
     {
       icon: (
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-          <polyline points="14 2 14 8 20 8" />
-          <line x1="9" y1="15" x2="15" y2="15" />
-        </svg>
-      ),
-      title: 'Business Audit',
-      description: 'Comprehensive analysis of your business processes, operations, and financial health. We identify areas for improvement and provide actionable recommendations to optimize performance and efficiency.'
-    },
-    {
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-          <circle cx="9" cy="7" r="4" />
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-        </svg>
-      ),
-      title: 'Compliance Consulting',
-      description: 'Expert guidance to ensure your business meets all regulatory requirements and industry standards. We help you navigate complex compliance landscapes and avoid costly penalties.'
-    },
-    {
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <line x1="12" y1="20" x2="12" y2="10" />
-          <line x1="18" y1="20" x2="18" y2="4" />
-          <line x1="6" y1="20" x2="6" y2="16" />
-        </svg>
-      ),
-      title: 'Risk Management',
-      description: 'Identify and mitigate potential risks to protect your business. We develop comprehensive risk management strategies that safeguard your assets, reputation, and future growth.'
-    },
-    {
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          <line x1="9" y1="12" x2="15" y2="12" />
-        </svg>
-      ),
-      title: 'Strategic Planning',
-      description: 'Develop long-term strategies to achieve your business objectives. We work with you to create actionable plans that align with your vision and drive sustainable growth.'
-    },
-    {
-      icon: (
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="3" y="3" width="18" height="18" rx="2" />
-          <line x1="9" y1="9" x2="15" y2="9" />
-          <line x1="9" y1="15" x2="15" y2="15" />
+          <line x1="8" y1="8" x2="16" y2="8" />
+          <line x1="8" y1="12" x2="16" y2="12" />
+          <line x1="8" y1="16" x2="16" y2="16" />
         </svg>
       ),
-      title: 'Financial Advisory',
-      description: 'Expert financial analysis and advisory services to help you make informed decisions. We provide insights into cash flow, investments, and financial planning.'
+      title: 'Formation',
+      description:
+        'SocialForma conçoit et anime des formations pratiques autour de la conformité sociale, du travail dissimulé et de la prévention des redressements URSSAF. Pensés pour les dirigeants, responsables RH et gestionnaires de paie, nos modules s’appuient sur des cas concrets pour vous transmettre les bons réflexes et instaurer une culture de conformité durable au sein de votre entreprise.'
     },
     {
       icon: (
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-          <circle cx="9" cy="7" r="4" />
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          <path d="M4 4h16v16H4z" />
+          <path d="M4 10h16" />
+          <path d="M10 4v16" />
+          <path d="M15 15l2 2 3-3" />
         </svg>
       ),
-      title: 'Training & Development',
-      description: 'Comprehensive training programs to develop your team\'s skills and capabilities. We offer customized workshops and ongoing support to enhance organizational effectiveness.'
+      title: 'Audit',
+      description:
+        'L’audit social SocialForma identifie les points de vigilance susceptibles d’entraîner un risque de redressement URSSAF. Contrats, bulletins de paie, pratiques RH : nous analysons vos documents pour vous remettre un rapport clair, hiérarchisant les actions correctives et des recommandations pragmatiques. L’objectif : anticiper, sécuriser et renforcer votre conformité avant tout contrôle.'
+    },
+    {
+      icon: (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M20 21v-7a2 2 0 0 0-2-2h-4" />
+          <path d="M4 21v-4a4 4 0 0 1 4-4h4" />
+          <circle cx="12" cy="7" r="4" />
+          <path d="M16 17l3 3 3-3" />
+        </svg>
+      ),
+      title: 'Accompagnement contrôle URSSAF',
+      description:
+        'Lorsqu’un contrôle URSSAF est engagé, SocialForma vous accompagne à chaque étape : préparation du dossier, échanges avec l’inspecteur, analyse des observations et stratégie de réponse. Selon vos besoins, nous mobilisons nos partenaires avocats spécialisés pour garantir une défense précise et coordonnée.'
     }
   ]
 
@@ -77,13 +49,11 @@ export default function Services() {
       <section className="section">
         <div className="container">
           <AnimateOnScroll animation="fadeInUp">
-            <h1 className="section-title">Our Services</h1>
+            <h1 className="section-title">Nos services</h1>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fadeInUp" delay={100}>
             <p className={styles.intro}>
-              We offer a comprehensive range of consulting services designed to help your
-              business thrive. Each service is tailored to meet your specific needs and
-              delivered with the highest level of expertise and professionalism.
+              SocialForma propose trois types d’interventions complémentaires pour répondre à tous les enjeux de conformité sociale et de gestion du risque URSSAF.
             </p>
           </AnimateOnScroll>
           <div className={styles.servicesGrid}>

@@ -18,8 +18,53 @@
   margin-top: 2rem;
 }
 
-.bookingSection,
+.detailsCard,
 .formSection {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 8px;
+}
+
+.detailsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detailsList li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.detailLabel {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+.detailsList a {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.detailsList a:hover {
+  color: var(--accent-dark);
+}
+
+.bookingWrapper {
+  margin-top: 4rem;
+}
+
+.bookingSection {
   background-color: var(--white);
   padding: 2.5rem;
   border-radius: 8px;
@@ -45,16 +90,24 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .bookingWrapper {
+    margin-top: 3rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .bookingSection,
+  .detailsCard,
   .formSection {
     padding: 2rem 1.5rem;
   }
 
   .sectionSubtitle {
     font-size: 1.5rem;
+  }
+
+  .bookingSection {
+    padding: 2rem 1.5rem;
   }
 }
 

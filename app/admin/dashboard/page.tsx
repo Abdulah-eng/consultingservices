@@ -139,7 +139,7 @@ export default function AdminDashboard() {
     return (
       <div className={styles.loading}>
         <div className={styles.spinner}></div>
-        <p>Loading dashboard...</p>
+        <p>Chargement du tableau de bord…</p>
       </div>
     )
   }
@@ -148,13 +148,13 @@ export default function AdminDashboard() {
     <div className={styles.dashboard}>
       <header className={styles.header}>
         <div className={styles.headerContent}>
-          <h1 className={styles.title}>Admin Dashboard</h1>
+          <h1 className={styles.title}>Tableau de bord</h1>
           <div className={styles.headerActions}>
             <Link href="/admin/settings" className={styles.settingsBtn}>
-              Settings
+              Paramètres
             </Link>
             <button onClick={handleLogout} className={styles.logoutBtn}>
-              Logout
+              Déconnexion
             </button>
           </div>
         </div>
@@ -166,13 +166,13 @@ export default function AdminDashboard() {
             className={`${styles.tab} ${activeTab === 'bookings' ? styles.active : ''}`}
             onClick={() => setActiveTab('bookings')}
           >
-            Bookings ({bookings.length})
+            Réservations ({bookings.length})
           </button>
           <button
             className={`${styles.tab} ${activeTab === 'contacts' ? styles.active : ''}`}
             onClick={() => setActiveTab('contacts')}
           >
-            Contact Submissions ({contacts.length})
+            Messages de contact ({contacts.length})
           </button>
         </div>
 
@@ -183,12 +183,12 @@ export default function AdminDashboard() {
                 <thead>
                   <tr>
                     <th>Date</th>
-                    <th>Time</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Problem</th>
-                    <th>Status</th>
+                    <th>Heure</th>
+                    <th>Nom</th>
+                    <th>E‑mail</th>
+                    <th>Téléphone</th>
+                    <th>Problème</th>
+                    <th>Statut</th>
                     <th>Actions</th>
                   </tr>
                 </thead>
@@ -196,7 +196,7 @@ export default function AdminDashboard() {
                   {bookings.length === 0 ? (
                     <tr>
                       <td colSpan={8} className={styles.empty}>
-                        No bookings found
+                        Aucune réservation
                       </td>
                     </tr>
                   ) : (
@@ -210,7 +210,7 @@ export default function AdminDashboard() {
                         <td className={styles.problemCell}>{booking.problem}</td>
                         <td>
                           <span className={`${styles.status} ${styles[booking.status]}`}>
-                            {booking.status}
+                            {({ pending: 'En attente', confirmed: 'Confirmé', cancelled: 'Annulé', completed: 'Terminé' } as any)[booking.status] || booking.status}
                           </span>
                         </td>
                         <td>
@@ -219,10 +219,10 @@ export default function AdminDashboard() {
                             onChange={(e) => updateBookingStatus(booking.id, e.target.value)}
                             className={styles.statusSelect}
                           >
-                            <option value="pending">Pending</option>
-                            <option value="confirmed">Confirmed</option>
-                            <option value="cancelled">Cancelled</option>
-                            <option value="completed">Completed</option>
+                            <option value="pending">En attente</option>
+                            <option value="confirmed">Confirmé</option>
+                            <option value="cancelled">Annulé</option>
+                            <option value="completed">Terminé</option>
                           </select>
                         </td>
                       </tr>
@@ -241,11 +241,11 @@ export default function AdminDashboard() {
                 <thead>
                   <tr>
                     <th>Date</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
+                    <th>Nom</th>
+                    <th>E‑mail</th>
+                    <th>Téléphone</th>
                     <th>Message</th>
-                    <th>Status</th>
+                    <th>Statut</th>
                     <th>Actions</th>
                   </tr>
                 </thead>
@@ -253,7 +253,7 @@ export default function AdminDashboard() {
                   {contacts.length === 0 ? (
                     <tr>
                       <td colSpan={7} className={styles.empty}>
-                        No contact submissions found
+                        Aucun message
                       </td>
                     </tr>
                   ) : (
@@ -266,7 +266,7 @@ export default function AdminDashboard() {
                         <td className={styles.messageCell}>{contact.message}</td>
                         <td>
                           <span className={`${styles.status} ${styles[contact.status]}`}>
-                            {contact.status}
+                            {({ new: 'Nouveau', read: 'Lu', replied: 'Répondu', archived: 'Archivé' } as any)[contact.status] || contact.status}
                           </span>
                         </td>
                         <td>
@@ -275,10 +275,10 @@ export default function AdminDashboard() {
                             onChange={(e) => updateContactStatus(contact.id, e.target.value)}
                             className={styles.statusSelect}
                           >
-                            <option value="new">New</option>
-                            <option value="read">Read</option>
-                            <option value="replied">Replied</option>
-                            <option value="archived">Archived</option>
+                            <option value="new">Nouveau</option>
+                            <option value="read">Lu</option>
+                            <option value="replied">Répondu</option>
+                            <option value="archived">Archivé</option>
                           </select>
                         </td>
                       </tr>

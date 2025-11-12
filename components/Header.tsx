@@ -20,17 +20,20 @@ export default function Header() {
               <path d="M12 20L16 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-          <span>CONSULTING</span>
+          <span>SOCIALFORMA</span>
         </Link>
         <nav className={styles.nav}>
+          <Link href="/" className={pathname === '/' ? styles.active : ''}>
+            Accueil
+          </Link>
           <Link href="/about" className={pathname === '/about' ? styles.active : ''}>
-            About Us
+            Qui sommes-nous ?
           </Link>
           <Link href="/services" className={pathname === '/services' ? styles.active : ''}>
-            Our Services
+            Nos services
           </Link>
           <Link href="/contact" className={`${styles.contactBtn} ${pathname === '/contact' ? styles.active : ''}`}>
-            Contact Us
+            Contact
           </Link>
         </nav>
       </div>

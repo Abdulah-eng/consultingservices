@@ -103,12 +103,12 @@ export default function AdminSettings() {
         <div className={styles.headerContent}>
           <div className={styles.headerLeft}>
             <Link href="/admin/dashboard" className={styles.backLink}>
-              ← Back to Dashboard
+              ← Retour au tableau de bord
             </Link>
-            <h1 className={styles.title}>Settings</h1>
+            <h1 className={styles.title}>Paramètres</h1>
           </div>
           <button onClick={handleLogout} className={styles.logoutBtn}>
-            Logout
+            Déconnexion
           </button>
         </div>
       </header>
@@ -116,15 +116,15 @@ export default function AdminSettings() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.section}>
-            <h2 className={styles.sectionTitle}>Change Password</h2>
+            <h2 className={styles.sectionTitle}>Changer le mot de passe</h2>
             <p className={styles.sectionDescription}>
-              Update your admin account password. Make sure to use a strong password.
+              Mettez à jour le mot de passe de votre compte administrateur. Utilisez un mot de passe robuste.
             </p>
 
             <form onSubmit={handlePasswordChange} className={styles.form}>
               <div className={styles.formGroup}>
                 <label htmlFor="currentPassword" className={styles.label}>
-                  Current Password
+                  Mot de passe actuel
                 </label>
                 <input
                   type="password"
@@ -133,13 +133,13 @@ export default function AdminSettings() {
                   value={currentPassword}
                   onChange={(e) => setCurrentPassword(e.target.value)}
                   required
-                  placeholder="Enter your current password"
+                  placeholder="Saisissez votre mot de passe actuel"
                 />
               </div>
 
               <div className={styles.formGroup}>
                 <label htmlFor="newPassword" className={styles.label}>
-                  New Password
+                  Nouveau mot de passe
                 </label>
                 <input
                   type="password"
@@ -148,17 +148,17 @@ export default function AdminSettings() {
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
                   required
-                  placeholder="Enter your new password (min. 6 characters)"
+                  placeholder="Saisissez votre nouveau mot de passe (min. 6 caractères)"
                   minLength={6}
                 />
                 <small className={styles.helpText}>
-                  Password must be at least 6 characters long
+                  Le mot de passe doit contenir au moins 6 caractères
                 </small>
               </div>
 
               <div className={styles.formGroup}>
                 <label htmlFor="confirmPassword" className={styles.label}>
-                  Confirm New Password
+                  Confirmer le nouveau mot de passe
                 </label>
                 <input
                   type="password"
@@ -167,7 +167,7 @@ export default function AdminSettings() {
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   required
-                  placeholder="Confirm your new password"
+                  placeholder="Confirmez votre nouveau mot de passe"
                   minLength={6}
                 />
               </div>
@@ -180,24 +180,24 @@ export default function AdminSettings() {
                 className={styles.submitBtn}
                 disabled={loading}
               >
-                {loading ? 'Updating Password...' : 'Update Password'}
+                {loading ? 'Mise à jour…' : 'Mettre à jour le mot de passe'}
               </button>
             </form>
           </div>
 
           <div className={styles.section}>
-            <h2 className={styles.sectionTitle}>Account Information</h2>
+            <h2 className={styles.sectionTitle}>Informations du compte</h2>
             <div className={styles.infoGrid}>
               <div className={styles.infoItem}>
-                <span className={styles.infoLabel}>Email:</span>
-                <span className={styles.infoValue}>{user?.email || 'Loading...'}</span>
+                <span className={styles.infoLabel}>E‑mail :</span>
+                <span className={styles.infoValue}>{user?.email || 'Chargement…'}</span>
               </div>
               <div className={styles.infoItem}>
-                <span className={styles.infoLabel}>User ID:</span>
-                <span className={styles.infoValue}>{user?.id || 'Loading...'}</span>
+                <span className={styles.infoLabel}>ID utilisateur :</span>
+                <span className={styles.infoValue}>{user?.id || 'Chargement…'}</span>
               </div>
               <div className={styles.infoItem}>
-                <span className={styles.infoLabel}>Last Updated:</span>
+                <span className={styles.infoLabel}>Dernière mise à jour :</span>
                 <span className={styles.infoValue}>
                   {user?.updated_at 
                     ? new Date(user.updated_at).toLocaleString()

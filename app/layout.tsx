@@ -3,12 +3,14 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import FloatingBookingButton from '@/components/FloatingBookingButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Consulting Services',
-  description: 'Professional consulting services',
+  title: 'SocialForma — Conformité sociale et accompagnement URSSAF',
+  description:
+    "SocialForma aide les entreprises à maîtriser leurs obligations sociales et à sécuriser leurs contrôles URSSAF.",
 }
 
 export default function RootLayout({
@@ -17,11 +19,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={inter.className}>
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingBookingButton />
       </body>
     </html>
   )

@@ -19,7 +19,7 @@ export default function BookingSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-  // Generate time slots (30-minute intervals from 9 AM to 5 PM)
+  // Génère des créneaux de 30 minutes de 9h à 17h
   const generateTimeSlots = () => {
     const slots = []
     for (let hour = 9; hour < 17; hour++) {
@@ -97,7 +97,7 @@ export default function BookingSection() {
 
       {selectedDate && (
         <div className={styles.timeSelection}>
-          <label className={styles.label}>Select Time (30-minute slot)</label>
+          <label className={styles.label}>Sélectionnez l’horaire (créneau de 30 minutes)</label>
           <div className={styles.timeSlots}>
             {timeSlots.map((time) => (
               <button
@@ -115,7 +115,7 @@ export default function BookingSection() {
 
       <div className={styles.formGroup}>
         <label className={styles.label} htmlFor="booking-name">
-          Name *
+          Nom *
         </label>
         <input
           type="text"
@@ -129,7 +129,7 @@ export default function BookingSection() {
 
       <div className={styles.formGroup}>
         <label className={styles.label} htmlFor="booking-email">
-          Email *
+          E‑mail *
         </label>
         <input
           type="email"
@@ -143,7 +143,7 @@ export default function BookingSection() {
 
       <div className={styles.formGroup}>
         <label className={styles.label} htmlFor="booking-phone">
-          Phone Number *
+          Numéro de téléphone *
         </label>
         <input
           type="tel"
@@ -157,7 +157,7 @@ export default function BookingSection() {
 
       <div className={styles.formGroup}>
         <label className={styles.label} htmlFor="booking-problem">
-          Problem/Question *
+          Problème / Question *
         </label>
         <textarea
           id="booking-problem"
@@ -171,13 +171,13 @@ export default function BookingSection() {
 
       {submitStatus === 'success' && (
         <div className={styles.successMessage}>
-          Booking submitted successfully! We'll confirm your appointment soon.
+          Réservation envoyée avec succès ! Nous confirmerons votre rendez‑vous prochainement.
         </div>
       )}
 
       {submitStatus === 'error' && (
         <div className={styles.errorMessage}>
-          There was an error submitting your booking. Please try again.
+          Une erreur est survenue lors de l’envoi de votre réservation. Veuillez réessayer.
         </div>
       )}
 
@@ -186,7 +186,7 @@ export default function BookingSection() {
         className={styles.submitBtn}
         disabled={isSubmitting}
       >
-        {isSubmitting ? 'Submitting...' : 'Book Appointment'}
+        {isSubmitting ? 'Envoi…' : 'Réserver un rendez‑vous'}
       </button>
     </form>
   )

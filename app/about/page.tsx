@@ -7,54 +7,48 @@ export default function About() {
       <section className="section">
         <div className="container">
           <AnimateOnScroll animation="fadeInUp">
-            <h1 className="section-title">About Us</h1>
+            <h1 className="section-title">Une expertise née du terrain</h1>
           </AnimateOnScroll>
           <div className={styles.content}>
             <AnimateOnScroll animation="fadeInLeft" className={styles.textBlock}>
               <p className={styles.paragraph}>
-                We are a team of experienced consultants dedicated to helping businesses
-                navigate complex challenges and achieve sustainable growth. With years of
-                expertise across various industries, we provide tailored solutions that
-                address your unique needs and drive measurable results.
+                SocialForma a été fondé par un ancien inspecteur URSSAF, fort de plusieurs années d’expérience dans le contrôle et la prévention du travail dissimulé. Cette expérience de terrain offre une compréhension fine des pratiques à risque et des exigences de l’administration.
               </p>
               <p className={styles.paragraph}>
-                Our approach is built on three core principles: understanding your business
-                deeply, providing actionable insights, and delivering results that matter.
-                We work closely with our clients to ensure that every recommendation is
-                practical, implementable, and aligned with your strategic objectives.
+                Aujourd’hui, cette expertise est mise au service des entreprises, dirigeants et responsables RH pour les aider à anticiper, structurer et sécuriser leurs démarches sociales.
               </p>
               <p className={styles.paragraph}>
-                Whether you're facing regulatory challenges, operational inefficiencies, or
-                strategic planning needs, our team brings the expertise and dedication
-                necessary to help you succeed. We believe in building long-term partnerships
-                with our clients, providing ongoing support as your business evolves.
+                Notre approche repose sur trois piliers : pédagogie, rigueur et pragmatisme.
+              </p>
+              <p className={styles.paragraph}>
+                En comprenant les attentes précises de l’URSSAF, SocialForma permet à ses clients d’éviter les erreurs coûteuses, de fiabiliser leurs process internes et de travailler en toute sérénité.
               </p>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fadeInRight" className={styles.values}>
-              <h2 className={styles.subtitle}>Our Values</h2>
+              <h2 className={styles.subtitle}>Nos valeurs</h2>
               <div className={styles.valuesGrid}>
                 <AnimateOnScroll animation="scaleIn" delay={0}>
                   <div className={styles.valueItem}>
-                  <h3>Excellence</h3>
-                  <p>We strive for the highest standards in everything we do</p>
+                  <h3>Transparence</h3>
+                  <p>Expliquer les règles et simplifier leur application.</p>
                   </div>
                 </AnimateOnScroll>
                 <AnimateOnScroll animation="scaleIn" delay={100}>
                   <div className={styles.valueItem}>
-                  <h3>Integrity</h3>
-                  <p>Honest, transparent communication in all our relationships</p>
+                  <h3>Rigueur</h3>
+                  <p>Garantir la conformité sociale dans la durée.</p>
                   </div>
                 </AnimateOnScroll>
                 <AnimateOnScroll animation="scaleIn" delay={200}>
                   <div className={styles.valueItem}>
-                  <h3>Innovation</h3>
-                  <p>Leveraging the latest insights and methodologies</p>
+                  <h3>Accompagnement</h3>
+                  <p>Offrir une relation de proximité, centrée sur les besoins concrets.</p>
                   </div>
                 </AnimateOnScroll>
                 <AnimateOnScroll animation="scaleIn" delay={300}>
                   <div className={styles.valueItem}>
-                  <h3>Partnership</h3>
-                  <p>Building long-term relationships based on trust and results</p>
+                  <h3>Prévention</h3>
+                  <p>Transformer la contrainte du contrôle en opportunité de structuration.</p>
                   </div>
                 </AnimateOnScroll>
               </div>

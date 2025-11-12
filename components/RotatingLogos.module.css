@@ -1,0 +1,99 @@
+.logosSection {
+  padding: 4rem 0;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.3;
+}
+
+.logosContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.logosTrack {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  animation: scroll 15s linear infinite;
+  will-change: transform;
+}
+
+.logoItem {
+  flex-shrink: 0;
+}
+
+.keywordBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(125, 155, 168, 0.15), rgba(174, 202, 214, 0.3));
+  color: var(--text-color);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: 1rem;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(44, 62, 80, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.logoItem:hover .keywordBadge {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(44, 62, 80, 0.18);
+  background: linear-gradient(135deg, rgba(125, 155, 168, 0.2), rgba(174, 202, 214, 0.35));
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .logosSection {
+    padding: 3rem 0;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .logosTrack {
+    gap: 2rem;
+    animation-duration: 10s;
+  }
+
+  .keywordBadge {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.4rem;
+  }
+}
+

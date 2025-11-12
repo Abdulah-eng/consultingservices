@@ -5,9 +5,10 @@ import styles from './ContactForm.module.css'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: '',
+    lastName: '',
+    firstName: '',
+    company: '',
     email: '',
-    phone: '',
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -26,20 +27,30 @@ export default function ContactForm() {
     setSubmitStatus('idle')
 
     try {
+      const payload = {
+        name: `${formData.firstName} ${formData.lastName}`.trim(),
+        email: formData.email,
+        phone: formData.company.trim() ? formData.company.trim() : 'Non renseigné',
+        message: formData.company.trim()
+          ? `${formData.message}\n\nEntreprise : ${formData.company.trim()}`
+          : formData.message,
+      }
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       })
 
       if (response.ok) {
         setSubmitStatus('success')
         setFormData({
-          name: '',
+          lastName: '',
+          firstName: '',
+          company: '',
           email: '',
-          phone: '',
           message: '',
         })
       } else {
@@ -57,22 +68,51 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className={styles.contactForm}>
       <div className={styles.formGroup}>
         <label className={styles.label} htmlFor="contact-name">
-          Name *
+          Nom *
         </label>
         <input
           type="text"
           id="contact-name"
-          name="name"
+          name="lastName"
           className={styles.input}
-          value={formData.name}
+          value={formData.lastName}
           onChange={handleChange}
           required
         />
       </div>
 
       <div className={styles.formGroup}>
+        <label className={styles.label} htmlFor="contact-firstname">
+          Prénom *
+        </label>
+        <input
+          type="text"
+          id="contact-firstname"
+          name="firstName"
+          className={styles.input}
+          value={formData.firstName}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div className={styles.formGroup}>
+        <label className={styles.label} htmlFor="contact-company">
+          Entreprise (facultatif)
+        </label>
+        <input
+          type="text"
+          id="contact-company"
+          name="company"
+          className={styles.input}
+          value={formData.company}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className={styles.formGroup}>
         <label className={styles.label} htmlFor="contact-email">
-          Email *
+          E‑mail *
         </label>
         <input
           type="email"
@@ -80,21 +120,6 @@ export default function ContactForm() {
           name="email"
           className={styles.input}
           value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div className={styles.formGroup}>
-        <label className={styles.label} htmlFor="contact-phone">
-          Phone Number *
-        </label>
-        <input
-          type="tel"
-          id="contact-phone"
-          name="phone"
-          className={styles.input}
-          value={formData.phone}
           onChange={handleChange}
           required
         />
@@ -117,13 +142,13 @@ export default function ContactForm() {
 
       {submitStatus === 'success' && (
         <div className={styles.successMessage}>
-          Thank you for your message! We'll get back to you soon.
+          Merci pour votre message ! Nous vous répondrons rapidement.
         </div>
       )}
 
       {submitStatus === 'error' && (
         <div className={styles.errorMessage}>
-          There was an error sending your message. Please try again.
+          Une erreur est survenue lors de l’envoi de votre message. Veuillez réessayer.
         </div>
       )}
 
@@ -132,7 +157,7 @@ export default function ContactForm() {
         className={styles.submitBtn}
         disabled={isSubmitting}
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        {isSubmitting ? 'Envoi…' : 'Envoyer le message'}
       </button>
     </form>
   )

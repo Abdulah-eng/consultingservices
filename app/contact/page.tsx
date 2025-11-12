@@ -11,34 +11,50 @@ export default function Contact() {
       <section className="section">
         <div className="container">
           <AnimateOnScroll animation="fadeInUp">
-            <h1 className="section-title">Contact Us</h1>
+            <h1 className="section-title">Contact</h1>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fadeInUp" delay={100}>
             <p className={styles.intro}>
-              Get in touch with us to discuss how we can help your business. Schedule a
-              consultation or send us a message, and we'll get back to you as soon as possible.
+              Besoin d’un accompagnement ou d’un audit de conformité ? Remplissez le formulaire ci-dessous, nous vous répondrons rapidement.
             </p>
           </AnimateOnScroll>
-          
+
           <div className={styles.contentGrid}>
-            <AnimateOnScroll animation="fadeInLeft" className={styles.bookingSection}>
-              <h2 className={styles.sectionSubtitle}>Schedule a Consultation</h2>
+            <AnimateOnScroll animation="fadeInLeft" className={styles.detailsCard}>
+              <h2 className={styles.sectionSubtitle}>Coordonnées directes</h2>
               <p className={styles.sectionDescription}>
-                Book a 30-minute time slot to get advice on a specific problem. Select a date
-                and time that works best for you.
+                Préférez le contact direct ? Nous restons disponibles pour répondre à vos questions et préparer votre accompagnement.
               </p>
-              <BookingSection />
+              <ul className={styles.detailsList}>
+                <li>
+                  <span className={styles.detailLabel}>Téléphone</span>
+                  <a href="tel:+33614616093">06 14 61 60 93</a>
+                </li>
+                <li>
+                  <span className={styles.detailLabel}>Email</span>
+                  <a href="mailto:contact@socialforma.fr">contact@socialforma.fr</a>
+                </li>
+              </ul>
             </AnimateOnScroll>
 
-            <AnimateOnScroll animation="fadeInRight" className={styles.formSection}>
-              <h2 className={styles.sectionSubtitle}>Send Us a Message</h2>
+            <AnimateOnScroll animation="fadeInRight" className={styles.formSection} id="contact-form">
+              <h2 className={styles.sectionSubtitle}>Formulaire de contact</h2>
               <p className={styles.sectionDescription}>
-                Have a question or want to learn more? Fill out the form below and we'll
-                respond promptly.
+                Partagez votre besoin et nous reviendrons vers vous avec une réponse personnalisée.
               </p>
               <ContactForm />
             </AnimateOnScroll>
           </div>
+
+          <AnimateOnScroll animation="fadeInUp" className={styles.bookingWrapper}>
+            <div className={styles.bookingSection} id="booking">
+              <h2 className={styles.sectionSubtitle}>Planifier une consultation</h2>
+              <p className={styles.sectionDescription}>
+                Vous souhaitez retenir un créneau d’échange ? Utilisez notre agenda pour réserver une session de 30 minutes dédiée à votre situation.
+              </p>
+              <BookingSection />
+            </div>
+          </AnimateOnScroll>
         </div>
       </section>
     </div>
