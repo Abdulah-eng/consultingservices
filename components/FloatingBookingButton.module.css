@@ -14,22 +14,22 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 1.5rem;
-  background-color: var(--text-color);
-  color: var(--bg-color);
+  background-color: var(--accent-dark);
+  color: var(--surface-color);
   border: none;
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(44, 62, 80, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 61, 116, 0.3);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   animation: pulse 2s ease-in-out infinite;
 }
 
 .floatingButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(44, 62, 80, 0.4);
-  background-color: var(--accent-dark);
+  box-shadow: 0 6px 25px rgba(0, 61, 116, 0.4);
+  background-color: var(--accent-medium);
 }
 
 .floatingButton:active {
@@ -44,7 +44,7 @@
   background-color: var(--white);
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 8px 30px rgba(44, 62, 80, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 61, 116, 0.18);
   min-width: 300px;
   max-width: 350px;
   animation: slideUp 0.3s ease-out;
@@ -96,8 +96,8 @@
 .bookButton {
   width: 100%;
   padding: 0.75rem 1.5rem;
-  background-color: var(--text-color);
-  color: var(--bg-color);
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent-medium));
+  color: var(--white);
   border: none;
   border-radius: 6px;
   font-size: 1rem;
@@ -107,9 +107,8 @@
 }
 
 .bookButton:hover {
-  background-color: var(--accent-dark);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 61, 116, 0.26);
 }
 
 @keyframes pulse {

@@ -1,7 +1,7 @@
 .highlights {
   position: relative;
-  background: radial-gradient(120% 140% at 95% 0%, rgba(31, 63, 99, 0.08), transparent 55%),
-    radial-gradient(120% 120% at 0% 30%, rgba(244, 193, 93, 0.12), transparent 60%);
+  background: radial-gradient(120% 140% at 95% 0%, rgba(0, 61, 116, 0.08), transparent 55%),
+    radial-gradient(120% 120% at 0% 30%, rgba(243, 194, 131, 0.16), transparent 60%);
 }
 
 .highlightGrid {
@@ -47,7 +47,7 @@
   gap: 0.4rem;
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
-  background: rgba(31, 63, 99, 0.12);
+  background: rgba(0, 61, 116, 0.12);
   color: var(--accent-dark);
   font-size: 0.75rem;
   font-weight: 600;
@@ -86,7 +86,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(31, 63, 99, 0.07), rgba(47, 108, 159, 0.08));
+  background: linear-gradient(135deg, rgba(0, 61, 116, 0.08), rgba(233, 221, 199, 0.22));
   mix-blend-mode: multiply;
 }
 
@@ -153,7 +153,7 @@
   gap: 0.5rem;
   padding: 0.35rem 1rem;
   border-radius: 999px;
-  background: rgba(31, 63, 99, 0.08);
+  background: rgba(0, 61, 116, 0.08);
   color: var(--accent-dark);
   font-size: 0.85rem;
   font-weight: 600;
@@ -199,7 +199,7 @@
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(14px);
-  box-shadow: 0 16px 45px rgba(21, 42, 64, 0.12);
+  box-shadow: 0 16px 45px rgba(0, 61, 116, 0.16);
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -219,7 +219,7 @@
 
 .heroPanel {
   border-radius: var(--radius-lg);
-  background: linear-gradient(160deg, rgba(31, 63, 99, 0.88), rgba(17, 34, 54, 0.95));
+  background: linear-gradient(160deg, rgba(0, 61, 116, 0.9), rgba(10, 38, 64, 0.95));
   color: var(--white);
   padding: 2.5rem;
   display: flex;
@@ -235,7 +235,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(244, 193, 93, 0.35), transparent 55%);
+  background: radial-gradient(circle at top right, rgba(243, 194, 131, 0.45), transparent 55%);
   opacity: 0.85;
 }
 
@@ -336,7 +336,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(31, 63, 99, 0.04), transparent 60%);
+  background: linear-gradient(180deg, rgba(0, 61, 116, 0.08), transparent 60%);
   pointer-events: none;
 }
 
@@ -381,7 +381,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, transparent, rgba(31, 63, 99, 0.08));
+  background: linear-gradient(135deg, transparent, rgba(0, 61, 116, 0.1));
   opacity: 0;
   transition: opacity 0.45s var(--transition);
 }
@@ -399,14 +399,14 @@
   width: 56px;
   height: 56px;
   border-radius: 18px;
-  background: rgba(31, 63, 99, 0.08);
+  background: rgba(0, 61, 116, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-size: 1.1rem;
   color: var(--accent-dark);
-  box-shadow: inset 0 0 0 1px rgba(31, 63, 99, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(0, 61, 116, 0.18);
 }
 
 .serviceCard h3 {
@@ -426,7 +426,7 @@
   margin-top: 2.5rem;
   padding: 2.2rem;
   border-radius: var(--radius-md);
-  background: rgba(31, 63, 99, 0.07);
+  background: rgba(0, 61, 116, 0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -447,7 +447,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(80% 80% at 15% 20%, rgba(244, 193, 93, 0.18), transparent);
+  background: radial-gradient(80% 80% at 15% 20%, rgba(243, 194, 131, 0.22), transparent);
   opacity: 0.6;
   pointer-events: none;
 }

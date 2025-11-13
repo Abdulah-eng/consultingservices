@@ -3,18 +3,18 @@
   top: 0;
   z-index: 100;
   padding: 1.4rem 0;
-  border-bottom: 1px solid rgba(24, 45, 64, 0.08);
+  border-bottom: 1px solid rgba(0, 61, 116, 0.08);
   backdrop-filter: blur(14px);
-  background: rgba(245, 243, 239, 0.82);
+  background: rgba(233, 221, 199, 0.85);
   position: sticky;
   top: 0;
-  box-shadow: 0 12px 40px rgba(19, 38, 58, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 61, 116, 0.1);
   animation: slideInDown 0.6s ease-out;
   transition: box-shadow 0.4s var(--transition), transform 0.4s var(--transition);
 }
 
 .header:hover {
-  box-shadow: 0 22px 45px rgba(19, 38, 58, 0.12);
+  box-shadow: 0 22px 45px rgba(0, 61, 116, 0.16);
 }
 
 .container {
@@ -29,32 +29,42 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.9rem;
   font-weight: 700;
   font-size: 1.35rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.04em;
   color: var(--text-color);
-  text-transform: uppercase;
   transition: transform 0.4s var(--transition), opacity 0.3s ease;
 }
 
 .logo:hover {
-  opacity: 0.8;
+  opacity: 0.85;
   transform: translateX(4px);
 }
 
-.logoIcon {
-  display: flex;
-  align-items: center;
-  padding: 0.6rem;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(31, 63, 99, 0.15), rgba(47, 108, 159, 0.18));
-  box-shadow: 0 10px 25px rgba(25, 52, 84, 0.15);
+.logoMark {
+  position: relative;
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 61, 116, 0.18);
+  background: linear-gradient(135deg, rgba(0, 61, 116, 0.42), rgba(233, 221, 199, 0.6));
   transition: transform 0.4s var(--transition);
 }
 
-.logo:hover .logoIcon {
-  transform: rotate(6deg) scale(1.05);
+.logoMark :global(img) {
+  object-fit: cover;
+}
+
+.logo:hover .logoMark {
+  transform: rotate(4deg) scale(1.05);
+}
+
+.logoText {
+  font-size: 1.32rem;
+  letter-spacing: 0.06em;
 }
 
 .nav {
@@ -115,7 +125,7 @@
   position: relative;
   overflow: hidden;
   transition: transform 0.35s var(--transition), box-shadow 0.35s var(--transition), color 0.3s ease, background 0.3s ease;
-  box-shadow: 0 12px 25px rgba(24, 45, 64, 0.18);
+  box-shadow: 0 12px 25px rgba(0, 61, 116, 0.22);
 }
 
 .contactBtn::before {
@@ -141,7 +151,7 @@
   background: var(--bg-color);
   color: var(--text-color);
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(24, 45, 64, 0.18);
+  box-shadow: 0 14px 30px rgba(0, 61, 116, 0.26);
 }
 
 @media (max-width: 768px) {

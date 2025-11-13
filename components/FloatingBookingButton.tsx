@@ -25,7 +25,7 @@ export default function FloatingBookingButton() {
       <button
         className={styles.floatingButton}
         onClick={() => setIsExpanded(!isExpanded)}
-        aria-label="Réserver un rendez-vous"
+        aria-label="Réserver un créneau"
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="3" y="4" width="18" height="18" rx="2" />
@@ -33,7 +33,7 @@ export default function FloatingBookingButton() {
           <line x1="8" y1="2" x2="8" y2="6" />
           <line x1="3" y1="10" x2="21" y2="10" />
         </svg>
-        <span className={styles.buttonText}>Réserver</span>
+        <span className={styles.buttonText}>Réserver un créneau</span>
       </button>
       
       {isExpanded && (
