@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import BookingSection from '@/components/BookingSection'
 import ContactForm from '@/components/ContactForm'
@@ -17,6 +18,16 @@ export default function Contact() {
             <p className={styles.intro}>
               Besoin d’un accompagnement ou d’un audit de conformité ? Remplissez le formulaire ci-dessous, nous vous répondrons rapidement.
             </p>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll animation="scaleIn" className={styles.contactVisual}>
+            <Image
+              src="/images/sixth.jpg"
+              alt="Consultation SocialForma lors d’un rendez-vous"
+              fill
+              sizes="(min-width: 1024px) 1100px, 95vw"
+              priority
+            />
           </AnimateOnScroll>
 
           <div className={styles.contentGrid}>

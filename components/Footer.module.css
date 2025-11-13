@@ -1,44 +1,51 @@
 .footer {
-  background-color: var(--bg-color);
-  border-top: 1px solid rgba(44, 62, 80, 0.1);
-  padding: 2rem 0;
-  margin-top: 4rem;
+  margin-top: 5rem;
+  padding: 2.4rem 0;
+  background: linear-gradient(140deg, rgba(31, 63, 99, 0.12), rgba(47, 108, 159, 0.1));
+  border-top: 1px solid rgba(24, 45, 64, 0.08);
+  backdrop-filter: blur(10px);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
   text-align: center;
 }
 
 .links {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  color: var(--text-color);
-  font-size: 0.9rem;
+  gap: 1rem;
+  color: var(--muted-text);
+  font-size: 0.92rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .links a {
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
   position: relative;
+  padding-bottom: 0.15rem;
+  transition: color 0.3s ease;
 }
 
 .links a::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -0.15rem;
+  bottom: -0.05rem;
   width: 100%;
   height: 1px;
-  background-color: currentColor;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent-medium));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--accent-dark);
 }
 
 .links a:hover::after {

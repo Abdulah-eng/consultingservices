@@ -1,86 +1,67 @@
 .contactForm {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.6rem;
 }
 
 .formGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  display: grid;
+  gap: 0.65rem;
 }
 
 .label {
-  display: block;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-color);
+  letter-spacing: 0.02em;
 }
 
 .input,
 .textarea {
-  padding: 0.75rem;
-  border: 1px solid rgba(44, 62, 80, 0.3);
-  border-radius: 4px;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(24, 45, 64, 0.16);
   font-size: 1rem;
   font-family: inherit;
   color: var(--text-color);
-  background-color: var(--white);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.92);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(24, 45, 64, 0.05);
 }
 
 .input:focus,
 .textarea:focus {
   outline: none;
-  border-color: var(--text-color);
-  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+  border-color: var(--accent-medium);
+  box-shadow: 0 0 0 3px rgba(47, 108, 159, 0.15);
   transform: translateY(-1px);
 }
 
 .textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 140px;
 }
 
 .submitBtn {
-  padding: 0.75rem 1.5rem;
-  border: 1px solid var(--border-color);
-  background-color: var(--text-color);
-  color: var(--bg-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent-medium));
+  color: var(--white);
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 0.5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.submitBtn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: var(--accent-dark);
-  transform: translate(-50%, -50%);
-  transition: width 0.5s, height 0.5s;
-  z-index: -1;
-}
-
-.submitBtn:hover:not(:disabled)::before {
-  width: 300px;
-  height: 300px;
+  transition: transform 0.35s var(--transition), box-shadow 0.35s var(--transition);
+  box-shadow: 0 18px 35px rgba(31, 63, 99, 0.18);
 }
 
 .submitBtn:hover:not(:disabled) {
-  background-color: var(--accent-dark);
-  border-color: var(--accent-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 26px 45px rgba(31, 63, 99, 0.24);
 }
 
 .submitBtn:disabled {
@@ -88,21 +69,23 @@
   cursor: not-allowed;
 }
 
-.successMessage {
-  padding: 1rem;
-  background-color: #d4edda;
-  color: #155724;
-  border-radius: 4px;
-  border: 1px solid #c3e6cb;
+.successMessage,
+.errorMessage {
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  line-height: 1.6;
   animation: fadeInUp 0.5s ease-out;
+}
+
+.successMessage {
+  background: rgba(212, 237, 218, 0.8);
+  border: 1px solid rgba(195, 230, 203, 0.9);
+  color: #155724;
 }
 
 .errorMessage {
-  padding: 1rem;
-  background-color: #f8d7da;
+  background: rgba(248, 215, 218, 0.8);
+  border: 1px solid rgba(245, 198, 203, 0.9);
   color: #721c24;
-  border-radius: 4px;
-  border: 1px solid #f5c6cb;
-  animation: fadeInUp 0.5s ease-out;
 }
-

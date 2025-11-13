@@ -11,18 +11,35 @@
   margin-bottom: 3rem;
 }
 
+.contactVisual {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 3rem;
+}
+
+.contactVisual :global(img) {
+  object-fit: cover;
+  filter: saturate(1.05);
+}
+
 .contentGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin-top: 2rem;
+  gap: 3rem;
+  margin-top: 2.5rem;
 }
 
 .detailsCard,
-.formSection {
-  background-color: var(--white);
-  padding: 2.5rem;
-  border-radius: 8px;
+.formSection,
+.bookingSection {
+  background: rgba(255, 255, 255, 0.88);
+  padding: 2.6rem 2.8rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
 }
 
 .detailsList {
@@ -38,6 +55,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(24, 45, 64, 0.08);
 }
 
 .detailLabel {
@@ -50,7 +69,7 @@
 
 .detailsList a {
   color: var(--text-color);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -61,13 +80,7 @@
 }
 
 .bookingWrapper {
-  margin-top: 4rem;
-}
-
-.bookingSection {
-  background-color: var(--white);
-  padding: 2.5rem;
-  border-radius: 8px;
+  margin-top: 3.5rem;
 }
 
 .sectionSubtitle {
@@ -97,17 +110,19 @@
 }
 
 @media (max-width: 768px) {
-  .detailsCard,
-  .formSection {
-    padding: 2rem 1.5rem;
-  }
-
   .sectionSubtitle {
     font-size: 1.5rem;
   }
 
+  .contactVisual {
+    height: 220px;
+    margin-bottom: 2rem;
+  }
+
+  .detailsCard,
+  .formSection,
   .bookingSection {
-    padding: 2rem 1.5rem;
+    padding: 2.2rem;
   }
 }
 
