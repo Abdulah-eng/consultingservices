@@ -13,7 +13,7 @@ export default function Header() {
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
           <span className={styles.logoMark}>
-            <Image src="/images/logo.png" alt="Logo SocialForma" fill sizes="64px" priority />
+            <Image src="/images/logo.png" alt="Logo SocialForma" fill sizes="80px" priority />
           </span>
           <span className={styles.logoText}>SocialForma</span>
         </Link>
