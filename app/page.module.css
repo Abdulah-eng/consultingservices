@@ -1,3 +1,77 @@
+.whySection {
+  position: relative;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.whyContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.whyIntro {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.whyText {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--muted-text);
+  margin-bottom: 1.2rem;
+}
+
+.whyList {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.whyList li {
+  position: relative;
+  padding-left: 1.8rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--muted-text);
+}
+
+.whyList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-dark);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.whyConclusion {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.whyTagline {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(0, 61, 116, 0.12);
+  font-style: italic;
+}
+
 .highlights {
   position: relative;
   background: radial-gradient(120% 140% at 95% 0%, rgba(0, 61, 116, 0.08), transparent 55%),
@@ -80,14 +154,16 @@
 .hero {
   position: relative;
   padding: 6rem 0 5.5rem;
+  background: var(--bg-color) url('/images/first.webp') center/cover no-repeat;
+  background-blend-mode: overlay;
 }
 
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0, 61, 116, 0.08), rgba(233, 221, 199, 0.22));
-  mix-blend-mode: multiply;
+  background: rgba(233, 221, 199, 0.75);
+  backdrop-filter: blur(1px);
 }
 
 .heroGrid {
@@ -99,9 +175,14 @@
 }
 
 .heroContent {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .heroVisual {
@@ -414,12 +495,30 @@
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--text-color);
+  margin-bottom: 0.5rem;
 }
 
 .serviceCard p {
   font-size: 1rem;
   line-height: 1.75;
   color: var(--muted-text);
+  margin-bottom: 1rem;
+}
+
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-top: auto;
+}
+
+.serviceLink:hover {
+  color: var(--accent-medium);
+  transform: translateX(4px);
 }
 
 .servicesFooter {

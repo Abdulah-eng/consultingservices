@@ -74,9 +74,6 @@ export default function Services() {
                     />
                   </div>
                   <div className={styles.serviceHeader}>
-                    <span className={styles.serviceIndex}>
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
                     <h3 className={styles.serviceTitle}>{service.title}</h3>
                   </div>
                   <p className={styles.serviceDescription}>{service.description}</p>
@@ -90,24 +87,6 @@ export default function Services() {
             ))}
           </div>
 
-          <AnimateOnScroll animation="fadeInUp" delay={120}>
-            <div className={styles.ctaPanel}>
-              <div>
-                <h2>Construisons ensemble votre feuille de route conformité.</h2>
-                <p>
-                  Chaque collaboration démarre par un audit flash pour identifier vos priorités et définir un plan d’action adapté à vos ressources.
-                </p>
-              </div>
-              <div className={styles.ctaActions}>
-                <Link href="/contact#booking" className="btn">
-                  Planifier un audit flash
-                </Link>
-                <Link href="/contact" className="btn secondary">
-                  Nous contacter
-                </Link>
-              </div>
-            </div>
-          </AnimateOnScroll>
         </div>
       </section>
     </div>

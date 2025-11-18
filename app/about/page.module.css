@@ -106,11 +106,25 @@
   gap: 1.8rem;
 }
 
+.storyContent {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 1.5rem;
+  color: var(--muted-text);
+  line-height: 1.85;
+  font-size: 1.05rem;
+}
+
 .valueItem {
   position: relative;
   border-radius: var(--radius-md);
   padding: 2.1rem;
-  background: var(--surface-color);
+  background: rgba(255, 255, 255, 0.75);
   box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
