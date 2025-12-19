@@ -8,6 +8,7 @@ export default function ContactForm() {
     lastName: '',
     firstName: '',
     company: '',
+    phone: '',
     email: '',
     message: '',
   })
@@ -30,7 +31,7 @@ export default function ContactForm() {
       const payload = {
         name: `${formData.firstName} ${formData.lastName}`.trim(),
         email: formData.email,
-        phone: formData.company.trim() ? formData.company.trim() : 'Non renseigné',
+        phone: formData.phone.trim() || 'Non renseigné',
         message: formData.company.trim()
           ? `${formData.message}\n\nEntreprise : ${formData.company.trim()}`
           : formData.message,
@@ -50,6 +51,7 @@ export default function ContactForm() {
           lastName: '',
           firstName: '',
           company: '',
+          phone: '',
           email: '',
           message: '',
         })
@@ -106,6 +108,20 @@ export default function ContactForm() {
           name="company"
           className={styles.input}
           value={formData.company}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className={styles.formGroup}>
+        <label className={styles.label} htmlFor="contact-phone">
+          Téléphone (facultatif)
+        </label>
+        <input
+          type="tel"
+          id="contact-phone"
+          name="phone"
+          className={styles.input}
+          value={formData.phone}
           onChange={handleChange}
         />
       </div>

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { sendBookingNotification } from '@/lib/email'
 
 // Create Supabase client for server-side API routes
 // Uses service role key if available (bypasses RLS), otherwise uses anon key with proper role
@@ -102,13 +103,35 @@ export async function POST(request: NextRequest) {
     if (error) {
       console.error('Error creating booking:', error)
       return NextResponse.json(
-        { 
+        {
           error: 'Failed to create booking',
           details: error.message || 'Unknown error',
           code: error.code || 'UNKNOWN'
         },
         { status: 500 }
       )
+    }
+
+    // Send email notification to admin (don't fail the request if email fails)
+    try {
+      const adminEmail = process.env.ADMIN_EMAIL
+      if (adminEmail) {
+        await sendBookingNotification({
+          date,
+          time,
+          name,
+          email,
+          phone,
+          problem,
+          adminEmail,
+        })
+        console.log('Admin notification email sent successfully')
+      } else {
+        console.warn('ADMIN_EMAIL environment variable not set - skipping email notification')
+      }
+    } catch (emailError) {
+      console.error('Failed to send admin notification email:', emailError)
+      // Don't return error - booking was successfully created to database
     }
 
     return NextResponse.json(
